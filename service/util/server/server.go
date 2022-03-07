@@ -5,6 +5,8 @@ import (
 	"html/template"
 	"net/http"
 	"time"
+
+	"github.com/gorilla/mux"s
 )
 
 // TmplMap maps html template paths to shortnames
@@ -16,7 +18,7 @@ import (
 //  - serve
 //   - serve.go
 var TmplMap = map[string]string{
-	"index": "../../web/html/index.html",
+	"index": "./index.html",
 }
 
 // InitHTTPServer initializes an http server at the provided address
@@ -28,6 +30,15 @@ func InitHTTPServer(addr string) *http.Server {
 		Handler:      nil,
 	}
 	return srv
+}
+
+func InitMuxRouter(port int) {
+	router := mux.NewRouter().StrictSlash(true)
+	router.HandleFunc("/api/ping", ping).Methods("GET")
+	router.HandleFunc("/api/posts", getPosts).Methods("GET")
+	portStr := fmt.Sprintf(":%d", port)
+	fmt.Printf("listening at port: '%s'...\n", portStr)
+	log.Fatal(http.ListenAndServe(portStr, router))
 }
 
 // RegisterHandlers registers the http handler functions:

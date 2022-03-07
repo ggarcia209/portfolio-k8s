@@ -8,11 +8,13 @@ COPY ./go.mod ./
 
 COPY ./go.sum ./
 
+COPY ./index.html ./
+
 RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /serve
+RUN go build -o .
 
 EXPOSE 8081
 
