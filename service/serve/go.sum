@@ -1,2 +1,8 @@
 github.com/ggarcia209/portfolio-k8s v0.0.0-20220307025145-e9a5d98f1170 h1:VjJdmvrbJK+8AhLH6fcQKqqjtSYCQZ42cQRcsgU5Xms=
 github.com/ggarcia209/portfolio-k8s v0.0.0-20220307025145-e9a5d98f1170/go.mod h1:gkJddSQJchLK9XVmGdCnkQyFahj3UVcazLHl+zFfb04=
+github.com/ggarcia209/portfolio-k8s v0.0.0-20220307034355-c24be5a913e8 h1:OO4//kvWuxDw08cyFFnXZ0ATvNi3Sg9TdYikX/83eZs=
+github.com/ggarcia209/portfolio-k8s v0.0.0-20220307034355-c24be5a913e8/go.mod h1:gkJddSQJchLK9XVmGdCnkQyFahj3UVcazLHl+zFfb04=
+github.com/ggarcia209/portfolio-k8s/service/util/server v0.0.0-20220307034355-c24be5a913e8 h1:mbAfMHrvfllWHMdoKO63XxJG2fUimRUYt6eUe7I91XM=
+github.com/ggarcia209/portfolio-k8s/service/util/server v0.0.0-20220307034355-c24be5a913e8/go.mod h1:o9tJsDKwKfyLiKgxLbd7hDGk53rOXhDwIjTGwB9jQA4=
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
