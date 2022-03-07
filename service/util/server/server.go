@@ -3,10 +3,11 @@ package server
 import (
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 	"time"
 
-	"github.com/gorilla/mux"s
+	"github.com/gorilla/mux"
 )
 
 // TmplMap maps html template paths to shortnames
@@ -34,8 +35,7 @@ func InitHTTPServer(addr string) *http.Server {
 
 func InitMuxRouter(port int) {
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/api/ping", ping).Methods("GET")
-	router.HandleFunc("/api/posts", getPosts).Methods("GET")
+	router.HandleFunc("/", Home).Methods("GET")
 	portStr := fmt.Sprintf(":%d", port)
 	fmt.Printf("listening at port: '%s'...\n", portStr)
 	log.Fatal(http.ListenAndServe(portStr, router))
